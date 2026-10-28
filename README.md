@@ -56,3 +56,7 @@ Features:
 - No API key required for Open-Meteo's public non-commercial API; attribution is included
 
 Note: use a local server or GitHub Pages if the browser restricts API requests when opening the file directly. Weather availability and precision depend on the upstream forecast model.
+
+
+## Task 5 — Northstar E-commerce Catalog
+See [`shop/README.md`](shop/README.md) for features, local setup and deployment instructions. Open `shop/index.html` through a local server or visit `/shop/` after GitHub Pages deployment.
