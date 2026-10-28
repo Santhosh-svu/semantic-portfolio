@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A responsive to-do list app with task management, filters, and local storage persistence.">
+  <meta name="theme-color" content="#635bff">
+  <title>TaskFlow — To-Do List</title>
+  <link rel="stylesheet" href="todo.css">
+  <script src="todo.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <main id="main" class="app-shell">
+    <header class="app-header">
+      <a class="brand" href="index.html" aria-label="Portfolio home">SN<span>.</span></a>
+      <div class="heading">
+        <p class="eyebrow">YOUR PERSONAL PLANNER</p>
+        <h1>Task<span>Flow</span></h1>
+        <p class="subtitle">Small steps. Real progress.</p>
+      </div>
+      <button id="theme-toggle" class="icon-button" type="button" aria-label="Switch color theme" title="Switch color theme">☾</button>
+    </header>
+
+    <section class="composer card" aria-labelledby="add-heading">
+      <h2 id="add-heading">What needs doing?</h2>
+      <form id="task-form" class="task-form">
+        <label class="sr-only" for="task-input">Task description</label>
+        <input id="task-input" name="task" type="text" maxlength="160" placeholder="e.g. Finish JavaScript assignment" autocomplete="off" required>
+        <button class="primary-button" type="submit">Add task <span aria-hidden="true">＋</span></button>
+      </form>
+      <p class="hint">Press Enter to add a task. Your tasks are saved on this device.</p>
+      <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="list-section card" aria-labelledby="list-heading">
+      <div class="list-top">
+        <div>
+          <p class="eyebrow">STAY ON TRACK</p>
+          <h2 id="list-heading">Your tasks</h2>
+        </div>
+        <span id="task-count" class="count-pill">0 tasks left</span>
+      </div>
+
+      <div class="toolbar">
+        <div class="filters" role="group" aria-label="Filter tasks">
+          <button type="button" class="filter-button active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter-button" data-filter="active" aria-pressed="false">Active</button>
+          <button type="button" class="filter-button" data-filter="completed" aria-pressed="false">Completed</button>
+        </div>
+        <button id="clear-completed" type="button" class="text-button">Clear completed</button>
+      </div>
+
+      <ul id="task-list" class="task-list" aria-label="Tasks"></ul>
+      <div id="empty-state" class="empty-state">
+        <div class="empty-icon" aria-hidden="true">✓</div>
+        <h3 id="empty-title">A fresh start</h3>
+        <p id="empty-copy">Add your first task above and make today count.</p>
+      </div>
+      <footer class="list-footer">
+        <span id="summary">0 total tasks</span>
+        <span><span class="status-dot" aria-hidden="true"></span> Saved locally</span>
+      </footer>
+    </section>
+
+    <p class="app-note">Made for focus, built with HTML, CSS and JavaScript.</p>
+  </main>
+
+  <dialog id="edit-dialog" class="edit-dialog" aria-labelledby="edit-heading">
+    <form id="edit-form" method="dialog">
+      <h2 id="edit-heading">Edit task</h2>
+      <label for="edit-input">Task description</label>
+      <input id="edit-input" name="edit-task" maxlength="160" required>
+      <div class="dialog-actions">
+        <button id="cancel-edit" class="secondary-button" type="button">Cancel</button>
+        <button class="primary-button" type="submit">Save changes</button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>

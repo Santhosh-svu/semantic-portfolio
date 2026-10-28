@@ -32,3 +32,14 @@ Open `index.html` in a browser. No dependencies or build tools are required.
 
 ## Important
 A 100 Lighthouse score cannot be guaranteed without testing in the target environment. Lighthouse scores can vary by browser version and audit conditions. This project is structured to support strong accessibility and SEO results.
+
+## Task 3 — TaskFlow To-Do List
+
+Open `todo.html` to use the interactive to-do application. It supports:
+- Create, read, update, and delete tasks
+- All, Active, and Completed filters
+- Automatic persistence with `localStorage`
+- Event delegation for task-row actions
+- Responsive layout, keyboard focus styles, live status messages, and light/dark theme toggle
+
+All data stays in the current browser on the device where you use the app. This is a client-side project; it does not sync between devices.
