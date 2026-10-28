@@ -4,6 +4,31 @@ document.querySelectorAll('[data-current-year]').forEach((element) => {
   element.textContent = String(new Date().getFullYear());
 });
 
+const root = document.documentElement;
+const themeButton = document.querySelector('.theme-toggle');
+
+function applyTheme(theme) {
+  root.dataset.theme = theme;
+  const isDark = theme === 'dark';
+  if (themeButton) {
+    themeButton.textContent = isDark ? 'Light mode' : 'Dark mode';
+    themeButton.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
+    themeButton.setAttribute('aria-pressed', String(!isDark));
+  }
+}
+
+let savedTheme = null;
+try { savedTheme = localStorage.getItem('portfolio-theme'); } catch (_) {}
+applyTheme(savedTheme === 'light' ? 'light' : 'dark');
+
+if (themeButton) {
+  themeButton.addEventListener('click', () => {
+    const nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    applyTheme(nextTheme);
+    try { localStorage.setItem('portfolio-theme', nextTheme); } catch (_) {}
+  });
+}
+
 const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#primary-navigation');
 

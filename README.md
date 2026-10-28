@@ -1,6 +1,6 @@
 # Semantic Portfolio Website
 
-A responsive four-page personal portfolio built with semantic HTML5, CSS, and vanilla JavaScript.
+A responsive four-page personal portfolio built with semantic HTML5, mobile-first CSS, CSS Grid, Flexbox, CSS custom properties, and vanilla JavaScript.
 
 ## Pages
 - `index.html` — Home
@@ -20,6 +20,8 @@ Open `index.html` in a browser. No dependencies or build tools are required.
 - Responsive navigation with `aria-expanded` and `aria-controls`
 - Explicit form labels, native input types, required fields, and live status region
 - Reduced-motion preference support
+- Mobile-first breakpoints with CSS Grid for page layout and Flexbox for component alignment
+- CSS custom properties and a persistent light/dark theme toggle
 - Good text contrast and responsive layout
 
 ## Before submission
