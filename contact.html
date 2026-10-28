@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact Santhosh N about projects, collaboration, or learning opportunities.">
+  <meta name="theme-color" content="#111827">
+  <title>Contact | Santhosh N</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Santhosh N home">SN<span>.</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+    <nav id="primary-navigation" class="primary-navigation" aria-label="Main navigation"><ul>
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li><li><a href="contact.html" aria-current="page">Contact</a></li>
+    </ul></nav>
+  </div></header>
+  <main id="main-content" class="container page-content">
+    <header class="page-heading"><p class="eyebrow">Let’s connect</p><h1>Contact me</h1><p>Have a question or want to collaborate? Use the form below.</p></header>
+    <section class="contact-layout" aria-labelledby="form-title">
+      <div><h2 id="form-title">Send a message</h2><p>All fields marked with an asterisk (*) are required.</p>
+        <form id="contact-form" action="#" method="get">
+          <div class="form-field"><label for="full-name">Full name <span aria-hidden="true">*</span></label><input id="full-name" name="name" type="text" autocomplete="name" required></div>
+          <div class="form-field"><label for="email">Email address <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-help"><p id="email-help" class="field-help">Use an email address where you can receive a reply.</p></div>
+          <div class="form-field"><label for="subject">Subject</label><input id="subject" name="subject" type="text" autocomplete="off"></div>
+          <div class="form-field"><label for="message">Message <span aria-hidden="true">*</span></label><textarea id="message" name="message" rows="6" required></textarea></div>
+          <button class="button" type="submit">Validate message</button>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+          <p class="note">Demo form only: it validates input in your browser and does not send or store messages. Connect a backend before using it for real contact.</p>
+        </form>
+      </div>
+      <aside class="contact-aside" aria-labelledby="other-contact-title"><h2 id="other-contact-title">Other ways to connect</h2><p>Add your professional links here before publishing.</p><ul><li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li><li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></li></ul></aside>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><p>© <span data-current-year>2026</span> Santhosh N.</p><a href="index.html">Back to home</a></div></footer>
+</body>
+</html>
