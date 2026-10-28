@@ -43,3 +43,16 @@ Open `todo.html` to use the interactive to-do application. It supports:
 - Responsive layout, keyboard focus styles, live status messages, and light/dark theme toggle
 
 All data stays in the current browser on the device where you use the app. This is a client-side project; it does not sync between devices.
+
+## Task 4 — SkyCast Weather Dashboard
+
+Open `weather.html` in a browser to use the weather dashboard. It uses the Open-Meteo Geocoding API to resolve a city name to coordinates, then calls the Forecast API with `fetch()` and `async/await` to display current temperature, apparent temperature, relative humidity, wind speed, weather code/condition, and local time.
+
+Features:
+- City search with loading, empty-result, HTTP, and network error handling
+- Parses nested JSON responses from two REST endpoints
+- Responsive desktop/mobile layout and accessible status messages
+- Weather condition descriptions and icons from WMO weather codes
+- No API key required for Open-Meteo's public non-commercial API; attribution is included
+
+Note: use a local server or GitHub Pages if the browser restricts API requests when opening the file directly. Weather availability and precision depend on the upstream forecast model.
